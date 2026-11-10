@@ -10,6 +10,15 @@ design, and SQL that holds up under scrutiny rather than just returning rows.
 
 ### Here
 
+**[grounded-ai-evals](https://github.com/adminleo/grounded-ai-evals)** —
+How do you test a system whose job is to answer *with evidence*? A four-layer
+method — graph correctness, ontology hygiene, answer groundedness, baseline
+comparison — ordered so each layer is only meaningful once the one above it
+holds. The library computes the metrics and renders a release gate that blocks
+on named checks rather than a weighted mean, because a 0.91 composite can hide
+a 0.40 unsupported-claim rate. Standard library, tested, with the method mapped
+to public standards and to the EU AI Act articles the evidence serves.
+
 **[eniac-magist-analysis](https://github.com/adminleo/eniac-magist-analysis)** —
 Should a European electronics retailer enter Brazil through a logistics partner?
 A SQL analysis of 99,441 marketplace orders, ending in a recommendation that
