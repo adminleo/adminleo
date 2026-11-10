@@ -45,5 +45,7 @@ systems that can show their work.
 
 ### Elsewhere
 
+[CV](https://adminleo.github.io/cv/) ·
 [creativate.tech](https://creativate.tech) ·
-[LinkedIn](https://www.linkedin.com/in/leonardo-bornhaeusser)
+[LinkedIn](https://www.linkedin.com/in/leonardo-bornhaeusser) ·
+[ORCID](https://orcid.org/0009-0005-6464-5179)
