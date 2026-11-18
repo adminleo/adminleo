@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img">
+<rect width="1200" height="540" fill="#0D0F1A"/>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#4B6EF5"/><stop offset="50%" stop-color="#36C399"/><stop offset="100%" stop-color="#6B5BCD"/></linearGradient></defs>
+<text x="56" y="56" font-family="Bricolage Grotesque" font-size="31" font-weight="300" fill="#E8EDF5">Four layers, in order</text>
+<text x="56" y="84" font-family="Bricolage Grotesque" font-size="16.5" font-weight="400" fill="#98A1BC">each one is only meaningful once the one above it holds</text>
+<line x1="78" y1="146" x2="78" y2="422" stroke="#272C45" stroke-width="2"/>
+<circle cx="78" cy="146" r="17" fill="#0D0F1A" stroke="#4B6EF5" stroke-width="2"/>
+<text x="78" y="152" font-family="Bricolage Grotesque" font-size="17" font-weight="600" fill="#4B6EF5" text-anchor="middle">1</text>
+<text x="116" y="144" font-family="Bricolage Grotesque" font-size="22" font-weight="600" fill="#E8EDF5">Graph correctness</text>
+<text x="116" y="170" font-family="Bricolage Grotesque" font-size="16" font-weight="400" fill="#98A1BC">Is what we stored true, sourced, and current?</text>
+<circle cx="78" cy="238" r="17" fill="#0D0F1A" stroke="#36C399" stroke-width="2"/>
+<text x="78" y="244" font-family="Bricolage Grotesque" font-size="17" font-weight="600" fill="#36C399" text-anchor="middle">2</text>
+<text x="116" y="236" font-family="Bricolage Grotesque" font-size="22" font-weight="600" fill="#E8EDF5">Ontology hygiene</text>
+<text x="116" y="262" font-family="Bricolage Grotesque" font-size="16" font-weight="400" fill="#98A1BC">Is the schema consistent, and does it answer what it was built for?</text>
+<circle cx="78" cy="330" r="17" fill="#0D0F1A" stroke="#6B5BCD" stroke-width="2"/>
+<text x="78" y="336" font-family="Bricolage Grotesque" font-size="17" font-weight="600" fill="#6B5BCD" text-anchor="middle">3</text>
+<text x="116" y="328" font-family="Bricolage Grotesque" font-size="22" font-weight="600" fill="#E8EDF5">Answer groundedness</text>
+<text x="116" y="354" font-family="Bricolage Grotesque" font-size="16" font-weight="400" fill="#98A1BC">Does every claim trace to a source that carries it?</text>
+<circle cx="78" cy="422" r="17" fill="#0D0F1A" stroke="#6C7593" stroke-width="2"/>
+<text x="78" y="428" font-family="Bricolage Grotesque" font-size="17" font-weight="600" fill="#6C7593" text-anchor="middle">4</text>
+<text x="116" y="420" font-family="Bricolage Grotesque" font-size="22" font-weight="600" fill="#E8EDF5">Baseline comparison</text>
+<text x="116" y="446" font-family="Bricolage Grotesque" font-size="16" font-weight="400" fill="#98A1BC">Is this better than a plain model and ordinary RAG?</text>
+<rect x="712" y="118" width="432" height="374" rx="10" fill="#15182A" stroke="#272C45" stroke-width="1.5"/>
+<text x="740" y="160" font-family="Bricolage Grotesque" font-size="20" font-weight="600" fill="#E8EDF5">Release gate</text>
+<text x="740" y="186" font-family="Bricolage Grotesque" font-size="15" font-weight="400" fill="#98A1BC">example run  ·  4 layers  ·  12 checks</text>
+<line x1="740" y1="206" x2="1116" y2="206" stroke="#272C45" stroke-width="1"/>
+<text x="740" y="240" font-family="Bricolage Grotesque" font-size="15.5" font-weight="600" fill="#6B5BCD">BLOCKED by three named checks</text>
+<rect x="740" y="263" width="4" height="14" rx="2" fill="#6B5BCD"/>
+<text x="756" y="274" font-family="Bricolage Grotesque" font-size="15.5" font-weight="400" fill="#E8EDF5">provenance coverage</text>
+<text x="1012" y="274" font-family="Bricolage Grotesque" font-size="15" font-weight="500" fill="#E8EDF5" text-anchor="end">0.80</text>
+<text x="1116" y="274" font-family="Bricolage Grotesque" font-size="15" font-weight="400" fill="#98A1BC" text-anchor="end">needs ≥ 0.95</text>
+<rect x="740" y="297" width="4" height="14" rx="2" fill="#6B5BCD"/>
+<text x="756" y="308" font-family="Bricolage Grotesque" font-size="15.5" font-weight="400" fill="#E8EDF5">citation precision</text>
+<text x="1012" y="308" font-family="Bricolage Grotesque" font-size="15" font-weight="500" fill="#E8EDF5" text-anchor="end">0.60</text>
+<text x="1116" y="308" font-family="Bricolage Grotesque" font-size="15" font-weight="400" fill="#98A1BC" text-anchor="end">needs ≥ 0.90</text>
+<rect x="740" y="331" width="4" height="14" rx="2" fill="#6B5BCD"/>
+<text x="756" y="342" font-family="Bricolage Grotesque" font-size="15.5" font-weight="400" fill="#E8EDF5">unsupported rate</text>
+<text x="1012" y="342" font-family="Bricolage Grotesque" font-size="15" font-weight="500" fill="#E8EDF5" text-anchor="end">0.40</text>
+<text x="1116" y="342" font-family="Bricolage Grotesque" font-size="15" font-weight="400" fill="#98A1BC" text-anchor="end">needs ≤ 0.05</text>
+<text x="740" y="388" font-family="Bricolage Grotesque" font-size="15.5" font-weight="600" fill="#36C399">— while passing both baselines</text>
+<circle cx="744" cy="415" r="4" fill="#36C399"/>
+<text x="756" y="420" font-family="Bricolage Grotesque" font-size="15.5" font-weight="400" fill="#E8EDF5">beats a plain model</text>
+<text x="1116" y="420" font-family="Bricolage Grotesque" font-size="15" font-weight="400" fill="#98A1BC" text-anchor="end">0.71</text>
+<circle cx="744" cy="447" r="4" fill="#36C399"/>
+<text x="756" y="452" font-family="Bricolage Grotesque" font-size="15.5" font-weight="400" fill="#E8EDF5">beats standard RAG</text>
+<text x="1116" y="452" font-family="Bricolage Grotesque" font-size="15" font-weight="400" fill="#98A1BC" text-anchor="end">0.58</text>
+<text x="56" y="506" font-family="Bricolage Grotesque" font-size="16" font-weight="400" fill="#6C7593">No weighted mean: a 0.91 composite can hide a 0.40 unsupported-claim rate, so the gate returns the blockers by name.</text>
+</svg>
