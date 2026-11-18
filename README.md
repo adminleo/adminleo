@@ -9,9 +9,12 @@ Berlin. I build AI systems that have to justify their answers — knowledge-grap
 grounding, provenance, audit trails — mostly for finance, legal and public-sector
 users who cannot accept "the model said so".
 
-The repositories below are the analytics side of that work. A theme runs through
-them: the headline number is usually the one to distrust, and most of the effort
-goes into finding out whether it means anything.
+I consult on AI projects, build the systems, and ship my own products where the
+case holds up. Most of that work is under NDA or still unreleased; what is here
+is the part that can be shown.
+
+A theme runs through it: the headline number is usually the one to distrust, and
+most of the effort goes into finding out whether it means anything.
 
 ### Research
 
@@ -52,6 +55,21 @@ of 92 titles recorded by two different artists, only 23.9 % land together.
 Forget to scale and the eight clusters come out as a ladder of track length,
 2.6 to 61.7 minutes, with no error raised.
 
+### Data engineering
+
+**[gans-data-pipeline](https://github.com/adminleo/gans-data-pipeline)**
+&nbsp;![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![GCP](https://img.shields.io/badge/-Google_Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+
+Scrapes city facts, weather and arriving flights into SQL on a daily schedule —
+local first, then the same function on Cloud Functions behind Cloud SQL, with a
+[live page](https://adminleo.github.io/gans-data-pipeline/) that reads a
+published snapshot so the database keeps no public route. The population column
+turned out to be the interesting part: Wikipedia uses six different labels for it
+across seven cities and dates them from a 2006 census to 2026, so a hardcoded
+label returns nothing for four of them — silently, as a missing value.
+
 ### Data analysis
 
 **[eniac-discount-strategy](https://github.com/adminleo/eniac-discount-strategy)**
@@ -80,6 +98,19 @@ verifier rather than only written. ·
 **[ab-testing](https://github.com/adminleo/ab-testing)** — a sample-size
 calculator and a design checklist, existing mostly to make one relationship
 obvious: halving the effect you want to detect quadruples the traffic you need.
+
+### Before this
+
+Ten years of building and leading before the repositories above. Two companies
+founded, one exited; teams of around a hundred people; roughly €3M in research
+funding won and delivered. The work that is not here is mostly client
+engineering under NDA, production infrastructure, and products that have not
+shipped yet — described in the [CV](https://adminleo.github.io/cv/), named only
+where the client has agreed.
+
+What I am working on next: evaluation methods for AI that answers with evidence,
+and the tooling around point-in-time legal grounding. Papers in preparation;
+artefacts land here first.
 
 ### Working with
 
