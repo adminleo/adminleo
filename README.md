@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
-  <img src="assets/banner-light.png" alt="Leonardo Bornhäußer — tech product owner, R&D lead for AI and knowledge graphs, venture builder">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/career-dark.png">
+  <img src="assets/career-light.png" alt="Career: consultant 2019–2021, proxy product owner at Karla / Sparkassen-Finanzgruppe 2021–2022, co-founder and head of operations at Camsol 2022–2025, managing director and CTO at Creativate Technologies since 2024">
 </picture>
 
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0005--6464--5179-A6CE39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0009-0005-6464-5179)
@@ -13,10 +13,52 @@ case holds up. Managing director and CTO at
 is knowledge-graph grounding, provenance and audit trails — mostly for finance,
 legal and public-sector users who cannot accept "the model said so".
 
-Most of that work is under NDA or not released yet. What is here is the part
-that can be shown, and a theme runs through it: the headline number is usually
-the one to distrust, and most of the effort goes into finding out whether it
-means anything.
+Technical product owner by trade: requirements, prioritisation, architecture
+decisions, the release gate, and the conversation with the people who have to
+sign off. Most of that work is under NDA or not released yet. What is here is
+the part that can be shown, and a theme runs through it: the headline number is
+usually the one to distrust, and most of the effort goes into finding out
+whether it means anything.
+
+---
+
+## Products and platforms I have owned
+
+| | |
+|---|---|
+| **c:node** · 2024 – now<br>founder, architect, lead | Knowledge-graph decision intelligence: bind a language model to a store that can be checked, so answers are auditable rather than fluent. In 2026 the monolith (~258,000 lines) was replaced by a service platform with its own identity and billing services. Runs in the cloud or fully on-premise with local GPU inference. |
+| **Zulano** · 2026 – now<br>architecture and ontology | Application and funding assistant for the public sector. A data mesh of more than 34 million structured records as the grounding layer, and a rule-based Java/Spring Boot service that routes a request to the responsible authority deterministically — a decision that may not depend on a model's guess. |
+| **LeadScout · Claudio · AI&nbsp;Playbook** · 2025 – 2026<br>founder, lead | Three product bets taken to paying customers: a multi-tenant B2B lead engine with ICP scoring and CRM integrations, a voice-note-to-task assistant shipped as SaaS and as a signed desktop app, and a trilingual AI-readiness check that generates its report as a PDF and sells in two tiers. Positioning, pricing and service boundaries owned end to end; folded into c:node in 2026 once the market had answered. |
+| **Gasvisor** · 2022 – 2024<br>venture lead | IoT CO₂ monitoring for industry: battery-powered LTE-M sensors for fill level, temperature and humidity, cloud analytics, and a dashboard with consumption forecast and automatic re-ordering — built for TRGS-510 compliance and ESG reporting, taken from incubator MVP to enterprise customers. |
+| **CheckMe** · 2023 – 2025<br>venture lead | Breast-cancer early detection for underserved regions: native apps plus web, an AI companion, and ultrasound analysis producing a radiologist-reviewed BI-RADS report. Clinical and regulatory stakeholders, privacy by design for health data. |
+| **Karla** · 2021 – 2022<br>proxy product owner | Beyond-banking platform of the German savings banks group, mandated by the DSGV. Headless CMS and a multi-vendor commerce layer, integrated with the Java systems of the group's IT provider. Requirements from three shareholder savings banks consolidated against one backlog and prepared for committee decision; a joint board pitch secured €500,000. |
+
+Before all of that: first technical lead in 2014, and a decade of software
+projects since. The full account is in the [CV](https://adminleo.github.io/cv/).
+
+---
+
+## Where it actually runs
+
+I deploy and then operate — the thing that breaks on a Sunday is mine.
+
+- **AWS** — EC2 with Docker behind Caddy and automatic TLS, S3 and CloudFront,
+  Lambda, ECR with lifecycle policies, Route 53, security groups opened and
+  closed per session. Day-to-day over the CLI, not the console.
+- **Google Cloud** — Cloud Functions on a schedule, behind Cloud SQL over a
+  unix socket, secrets in Secret Manager, Cloud Scheduler authenticating with
+  OIDC. The public receipt for this one is
+  [gans-data-pipeline](https://github.com/adminleo/gans-data-pipeline), including
+  the deploy and teardown scripts and the four permission mistakes they now
+  avoid.
+- **Hetzner** — smaller services and staging where the cost per gigabyte of RAM
+  decides it.
+- **On-premise and air-gapped** — single-command deployment on a customer's own
+  hardware with local GPU inference, for buyers whose data cannot leave the
+  building. One pilot ran on a German city's live data.
+
+What I have not done, in case it saves someone a call: no managed Kubernetes in
+production, and no Bedrock.
 
 ---
 
@@ -26,8 +68,7 @@ means anything.
 &nbsp;[![tests](https://img.shields.io/github/actions/workflow/status/adminleo/grounded-ai-evals/tests.yml?style=flat-square&label=tests)](https://github.com/adminleo/grounded-ai-evals/actions)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24100702-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.24100702)
 
-How do you test a system whose job is to answer *with evidence*? Four layers —
-graph correctness, ontology hygiene, answer groundedness, baseline comparison —
+How do you test a system whose job is to answer *with evidence*? Four layers,
 ordered so that each one is only meaningful once the one above it holds. The
 library computes the metrics and renders a release gate that blocks on named
 checks rather than on a weighted mean.
@@ -37,13 +78,14 @@ checks rather than on a weighted mean.
   <img src="assets/eval-gate-light.png" alt="The four layers, and a release gate that blocks on three named checks while the system passes both baselines">
 </picture>
 
-The example run above is the argument for the design: a system that beats a
-plain model and ordinary RAG, and is still blocked, by name, on provenance
-coverage, citation precision and unsupported-claim rate. An average would have
-let it through. Standard library, tested, with the method mapped to public
-standards and to the EU AI Act articles the evidence serves.
+The example run is the argument for the design: a system that beats a plain
+model and ordinary RAG, and is still blocked, by name, on provenance coverage,
+citation precision and unsupported-claim rate. An average would have let it
+through. Standard library, tested, with the method mapped to public standards
+and to the EU AI Act articles the evidence serves.
 
-Also public: **[governed-graph-growth](https://github.com/CreativateLabs/governed-graph-growth)**
+Also public:
+**[governed-graph-growth](https://github.com/CreativateLabs/governed-graph-growth)**
 &nbsp;[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24099664-1682D4?style=flat-square)](https://doi.org/10.5281/zenodo.24099664)
 — a technical note on letting a knowledge graph grow without letting it rot.
 Next: evaluation methods for AI that answers with evidence, and point-in-time
@@ -51,24 +93,9 @@ legal grounding. Papers in preparation; artefacts land here first.
 
 ---
 
-## Building and running things
+## Public code
 
-| | |
-|---|---|
-| **Creativate Technologies** | Founded January 2024. Grew it into a consultancy with productive software, then carried the R&D into deep tech — knowledge graph, provenance, the c:node product line. Managing director and CTO. |
-| **Camsol** | 2022 – 2024, exited at the end of 2024. |
-| **Shipped** | At least seven products taken all the way into operation, from lead generation to regulated-document assistants — among them [c:node](https://c-node.ai), AI Playbook and LeadScout. |
-| **Scale** | Teams of up to around a hundred people. Roughly €2.5M in research funding won and delivered. Over a million lines of code since January 2026 in projects I was responsible for, built agentically. |
-
-What that adds up to day to day: owning a product line end to end — discovery,
-architecture, the roadmap, the release gate — and being the person who has to
-say *this is not ready* when the demo looks fine.
-
----
-
-## Selected repositories
-
-### Systems and pipelines
+### Pipelines
 
 **[gans-data-pipeline](https://github.com/adminleo/gans-data-pipeline)**
 &nbsp;![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
@@ -173,16 +200,17 @@ repositories reports what it did not recognise. —
 ## Working with
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/-SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
-![pandas](https://img.shields.io/badge/-pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/-scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![SQL](https://img.shields.io/badge/-SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
+![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
+![GCP](https://img.shields.io/badge/-Google_Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
 
 Eight, not eighty — the ones I would be happy to be tested on. Alongside them:
-Next.js in production, Postgres and SQLite, graph stores, and a long-standing
+pandas and scikit-learn, Postgres and SQLite, graph stores, Java and Spring Boot
+at architecture level, Ollama for local inference, and a long-standing
 preference for systems that can show their work.
 
 <details>
