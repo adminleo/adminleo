@@ -246,14 +246,6 @@ pandas and scikit-learn, Postgres and SQLite, graph stores, Java and Spring Boot
 at architecture level, Ollama for local inference, and a long-standing
 preference for systems that can show their work.
 
-## Activity
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=adminleo&theme=github_dark">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=adminleo&theme=github" alt="Profile summary">
-</picture>
-
-
 ---
 
 ## Talk to me
