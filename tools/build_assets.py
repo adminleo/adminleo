@@ -52,14 +52,20 @@ def svg(w, h, body, th):
 # ----------------------------------------------------------------- career ----
 def career(th):
     """Dates from the CV at adminleo.github.io/cv."""
-    W, H = 1200, 376
+    W, H = 1200, 442
     X0, X1, Y0, Y1 = 72, 1128, 2019.0, 2027.0
 
     def x(year):
         return X0 + (year - Y0) / (Y1 - Y0) * (X1 - X0)
 
-    p = [t(24, 34, "Leading software projects since 2014", 15, 600, "fg", th=th),
-         t(24, 56, "the roles overlap because the next one started before the last one ended", 13, 400, "muted", th=th)]
+    p = [t(24, 46, "Leonardo Bornhäußer", 27, 600, "fg", th=th),
+         t(24, 72, "Technical product owner · R&D lead for AI and knowledge graphs · "
+                   "Venture builder · Frankfurt", 14, 400, "muted", th=th),
+         f'<line x1="24" y1="96" x2="{W-24}" y2="96" stroke="{th["border"]}" '
+         f'stroke-width="1"/>',
+         t(24, 124, "Leading software projects since 2014. The roles overlap "
+                    "because the next one started before the last one ended.",
+           13, 400, "faint", th=th)]
 
     rows = [
         (2019.5, 2021.75, "Transformation and technology consultant",
@@ -73,12 +79,12 @@ def career(th):
     ]
 
     for year in range(2019, 2027):
-        p.append(f'<line x1="{x(year):.1f}" y1="102" x2="{x(year):.1f}" y2="{H-16}" '
+        p.append(f'<line x1="{x(year):.1f}" y1="160" x2="{x(year):.1f}" y2="{H-16}" '
                  f'stroke="{th["border"]}" stroke-width="1" opacity="0.6"/>')
-        p.append(t(x(year), 94, str(year), 12, 400, "faint",
+        p.append(t(x(year), 152, str(year), 12, 400, "faint",
                    anchor="middle", th=th))
 
-    y = 132
+    y = 190
     for j, (a, b, role, org, note) in enumerate(rows):
         current = j == len(rows) - 1
         fill = th["accent"] if current else th["subtle"]
