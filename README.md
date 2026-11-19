@@ -248,6 +248,21 @@ preference for systems that can show their work.
 
 ---
 
+## Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/contributions-dark.png">
+  <img src="assets/contributions-light.png" alt="Contributions over the last twelve months, by month, public and private">
+</picture>
+
+Redrawn every day by
+[a workflow in this repository](.github/workflows/contributions.yml), because a
+third-party card cannot see private contributions — the API hands those to the
+account that made them and to nobody else. Most of the work above is private,
+so a card would have shown a flat line.
+
+---
+
 ## Talk to me
 
 If any of this is close to a problem you have:
