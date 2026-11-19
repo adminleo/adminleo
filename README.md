@@ -8,6 +8,7 @@
 [![CV](https://img.shields.io/badge/CV-adminleo.github.io%2Fcv-24292F?style=flat-square&logo=github&logoColor=white)](https://adminleo.github.io/cv/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-leonardo--bornhaeusser-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leonardo-bornhaeusser)
 [![Creativate](https://img.shields.io/badge/creativate.tech-1f2328?style=flat-square&logo=googlechrome&logoColor=white)](https://creativate.tech)
+[![Book a call](https://img.shields.io/badge/book-30%20minutes-1a7f37?style=flat-square&logo=googlecalendar&logoColor=white)](https://calendar.app.google/wKQLGVxpP1n67fZL6)
 
 I consult on AI projects, build the systems, and ship my own products when the
 case holds up.
@@ -30,11 +31,11 @@ it means anything.
 | | |
 |---|---|
 | **[c:node](https://c-node.ai)** · 2024 – now<br>founder, architect, lead | Software that answers questions from a company's own knowledge and shows where each answer comes from. Built from scratch. In 2026 I replaced the original single program (~258,000 lines) with separate services, each with one job, plus its own login and billing. Runs in the cloud or entirely on a customer's own servers. Live: [c-node.ai](https://c-node.ai) · [try.c-node.ai](https://try.c-node.ai) · [graph.c-node.ai](https://graph.c-node.ai) |
-| **[Zulano](https://app.zulano.io)** · 2026 – now<br>architecture and ontology | An assistant for public-sector applications and funding research. Behind it sit 34 million structured records as source material, and a Java service that decides which authority is responsible using fixed rules. That decision must not depend on a model's guess, so it does not. |
-| **LeadScout · Claudio · AI&nbsp;Playbook** · 2025 – 2026<br>founder, lead | Three products taken to paying customers: a lead engine for B2B sales with scoring and CRM connections, an assistant that turns a voice note into a task (web app and signed desktop app), and an AI readiness check in three languages that writes its own PDF report and sells in two tiers. I owned positioning, pricing, and what the service does and does not promise. In 2026 I folded all three into c:node. |
-| **Gasvisor** · 2022 – 2024<br>venture lead | CO₂ monitoring for industrial sites. Battery sensors measure fill level, temperature and humidity and send it over the mobile network. A dashboard predicts consumption and reorders automatically. Built around German safety rules (TRGS 510) and ESG reporting, and taken from a first version to enterprise customers. |
-| **CheckMe** · 2023 – 2025<br>venture lead | Breast cancer early detection for regions with few specialists. Mobile apps and web, an AI companion, and ultrasound analysis that produces a BI-RADS report for a radiologist to review. Clinical and regulatory stakeholders, privacy built in from the start. |
-| **Karla** · 2021 – 2022<br>proxy product owner | A platform of the German savings banks group for services beyond banking. I ran a headless CMS and a multi-vendor shop, connected to the group's Java systems. Three savings banks held shares and each had its own requirements; I turned them into one backlog and prepared the committee decisions. A joint pitch to the board secured €500,000. |
+| **[Zulano](https://www.zulano.io)** · 2026 – now<br>architecture and ontology | An assistant for public-sector applications and funding research. Behind it sit 34 million structured records as source material, and a Java service that decides which authority is responsible using fixed rules. That decision must not depend on a model's guess, so it does not. Live: [zulano.io](https://www.zulano.io) · [app.zulano.io](https://app.zulano.io) |
+| **LeadScout · Claudio · [AI&nbsp;Playbook](https://ai-playbook.creativate.tech)** · 2025 – 2026<br>founder, lead | Three products taken to paying customers: a lead engine for B2B sales with scoring and CRM connections, an assistant that turns a voice note into a task (web app and signed desktop app), and an AI readiness check in three languages that writes its own PDF report and sells in two tiers. I owned positioning, pricing, and what the service does and does not promise. In 2026 I folded all three into c:node; [AI Playbook](https://ai-playbook.creativate.tech) is still up. |
+| **[Gasvisor](https://gasvisor.eu)** · 2022 – 2024<br>product lead | CO₂ monitoring for industrial sites. Battery sensors measure fill level, temperature and humidity and send it over the mobile network. A dashboard predicts consumption and reorders automatically. Built around German safety rules (TRGS 510) and ESG reporting, and taken from a first version to enterprise customers. |
+| **[CheckMe](https://checkme-app.com/en)** · 2023 – 2025<br>product lead | Breast cancer early detection for women in sub-Saharan Africa, where specialists are far away. Mobile apps and web, an AI companion, and ultrasound analysis that produces a BI-RADS report for a radiologist to review. Clinical and regulatory stakeholders, privacy built in from the start. |
+| **[Karla](https://www.saalesparkasse.de/content/dam/myif/saalesparkasse/work/dokumente/regional/pdf/karla/karla-flyer-fk-a5.pdf?stref=textbox)** · 2021 – 2022<br>proxy product owner | A platform of the German savings banks group for services beyond banking. I ran a headless CMS and a multi-vendor shop, connected to the group's Java systems. Three savings banks held shares and each had its own requirements; I turned them into one backlog and prepared the committee decisions. A joint pitch to the board secured €500,000. |
 
 Before that: first technical lead in 2014, and a decade of software projects
 since. The full account is in the [CV](https://adminleo.github.io/cv/).
@@ -181,6 +182,31 @@ effect you want to detect and you need four times the traffic.
 
 ## How I work
 
+### Running the work
+
+**Scrum or Kanban, whichever the team can actually sustain.** Planning, review
+and retrospective, with refinement happening *before* planning rather than
+inside it. Most teams that say sprints do not work are refining in the planning
+meeting.
+
+**The ticket is the specification.** It carries the acceptance criteria, and
+work is done when the criteria are met, not when the code exists. Everything
+downstream — review, tests, the release decision — reads that one document.
+
+**Decisions get written down.** Architecture decision records, with the option
+that was rejected and the reason. A team's memory is what survives the people
+who were in the room.
+
+**OKRs for direction, a handful of KPIs for whether it is working.** I have run
+this with international, multilingual teams across several time zones, where
+the written-down version is the only version that exists.
+
+**One confirmation gate before anything irreversible.** Deploys, deletions,
+anything customer-facing. The gate is a person, and it is not negotiable
+because the pipeline is green.
+
+### Judging the result
+
 **Agree the bar before the run.** A threshold set afterwards describes a result,
 it does not test it. In grounded-ai-evals the measured value and the bar go into
 the same call, so no scorecard can be assembled later to flatter the outcome. A
@@ -220,15 +246,22 @@ pandas and scikit-learn, Postgres and SQLite, graph stores, Java and Spring Boot
 at architecture level, Ollama for local inference, and a long-standing
 preference for systems that can show their work.
 
-<details>
-<summary>Activity</summary>
+## Activity
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=adminleo&theme=github_dark">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=adminleo&theme=github" alt="Profile summary">
 </picture>
 
-</details>
+
+---
+
+## Talk to me
+
+If any of this is close to a problem you have:
+**[book 30 minutes](https://calendar.app.google/wKQLGVxpP1n67fZL6)**. No deck,
+no discovery questionnaire — bring the problem and we will see whether I am the
+right person for it.
 
 [CV](https://adminleo.github.io/cv/) ·
 [creativate.tech](https://creativate.tech) ·
