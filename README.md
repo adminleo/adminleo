@@ -35,7 +35,7 @@ it means anything.
 | **LeadScout · Claudio · [AI&nbsp;Playbook](https://ai-playbook.creativate.tech)** · 2025 – 2026<br>founder, lead | Three products taken to paying customers: a lead engine for B2B sales with scoring and CRM connections, an assistant that turns a voice note into a task (web app and signed desktop app), and an AI readiness check in three languages that writes its own PDF report and sells in two tiers. I owned positioning, pricing, and what the service does and does not promise. In 2026 I folded all three into c:node; [AI Playbook](https://ai-playbook.creativate.tech) is still up. |
 | **[Gasvisor](https://gasvisor.eu)** · 2022 – 2024<br>product lead | CO₂ monitoring for industrial sites. Battery sensors measure fill level, temperature and humidity and send it over the mobile network. A dashboard predicts consumption and reorders automatically. Built around German safety rules (TRGS 510) and ESG reporting, and taken from a first version to enterprise customers. |
 | **[CheckMe](https://checkme-app.com/en)** · 2023 – 2025<br>product lead | Breast cancer early detection for women in sub-Saharan Africa, where specialists are far away. Mobile apps and web, an AI companion, and ultrasound analysis that produces a BI-RADS report for a radiologist to review. Clinical and regulatory stakeholders, privacy built in from the start. |
-| **[Karla](https://www.saalesparkasse.de/content/dam/myif/saalesparkasse/work/dokumente/regional/pdf/karla/karla-flyer-fk-a5.pdf?stref=textbox)** · 2021 – 2022<br>proxy product owner | A platform of the German savings banks group for services beyond banking. I ran a headless CMS and a multi-vendor shop, connected to the group's Java systems. Three savings banks held shares and each had its own requirements; I turned them into one backlog and prepared the committee decisions. A joint pitch to the board secured €500,000. |
+| **Karla** · 2021 – 2022<br>proxy product owner | A platform of the German savings banks group for services beyond banking. I ran a headless CMS and a multi-vendor shop, connected to the group's Java systems. Three savings banks held shares and each had its own requirements; I turned them into one backlog and prepared the committee decisions. A joint pitch to the board secured €500,000. |
 
 Before that: first technical lead in 2014, and a decade of software projects
 since. The full account is in the [CV](https://adminleo.github.io/cv/).
@@ -159,6 +159,18 @@ Should a European retailer enter Brazil through a logistics partner? 99,441
 orders, and an answer that contradicts the deal on the table. Every number links
 back to the query that produced it, and the repository says plainly which
 question the data cannot answer.
+
+**[magist-ask](https://github.com/adminleo/magist-ask)**
+&nbsp;![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Gradio](https://img.shields.io/badge/-Gradio-FF7C00?style=flat-square&logo=gradio&logoColor=white)
+![SQLite](https://img.shields.io/badge/-SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+
+The same 99,441 orders, but you ask the questions. A model writes the SQL and
+**the SQL is shown next to the answer**, because a number on its own asks to be
+believed and a number with its query can be argued with. Letting a model write
+SQL against a database is an injection surface with better manners, so only
+`SELECT` and `WITH` get through, no write verb may appear anywhere in the body,
+and the connection underneath is read-only in case that guard is wrong.
 
 **[eniac-discount-strategy](https://github.com/adminleo/eniac-discount-strategy)**
 &nbsp;![pandas](https://img.shields.io/badge/-pandas-150458?style=flat-square&logo=pandas&logoColor=white)
