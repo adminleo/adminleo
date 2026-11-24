@@ -19,6 +19,12 @@ that has to prove its answers: every statement points back to a source, and the
 trail can be checked afterwards. Our users work in finance, law and the public
 sector, where "the model said so" is not an acceptable answer.
 
+What I do day to day sits between two jobs that are usually held by two
+people. One decides what gets built and when it is done; the other finds out,
+from the data, whether it worked. A product owner who can read the data
+himself does not need anyone to tell him whether a feature landed — and an
+analysis that ends in a number rather than a decision was not finished.
+
 Most of that work is under an NDA or not released yet. This page shows the part
 that can be shown. One idea runs through all of it: the headline number is
 usually the one to distrust, and most of the work goes into finding out whether
@@ -149,16 +155,22 @@ it sounds to a listener — of 92 titles recorded by two different artists, only
 clusters simply sort songs by length, 2.6 to 61.7 minutes, without raising an
 error.
 
-### Analysis that ends in a decision
+### Analysis that ends in a decision, not a number
 
 **[eniac-magist-analysis](https://github.com/adminleo/eniac-magist-analysis)**
 &nbsp;![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![Tableau](https://img.shields.io/badge/-Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
 
 Should a European retailer enter Brazil through a logistics partner? 99,441
-orders, and an answer that contradicts the deal on the table. Every number links
-back to the query that produced it, and the repository says plainly which
-question the data cannot answer.
+orders, and an answer that contradicts the deal on the table: **sign, but not
+this contract.** Enter with accessories rather than flagship hardware — only
+202 of 3,095 sellers have ever handled that price class. Cut three years to
+twelve or eighteen months, or keep three with a delivery SLA and an exit clause
+tied to it. Phase the rollout by region, because 8.3 days in São Paulo and 20+
+days in the north are not the same promise.
+
+Every number links back to the query that produced it, and the repository says
+plainly which question the data cannot answer — the one the deal turns on.
 
 **[magist-ask](https://github.com/adminleo/magist-ask)**
 &nbsp;![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
